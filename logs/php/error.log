@@ -1,0 +1,115 @@
+[06-Aug-2024 04:11:37 UTC] PHP Parse error:  syntax error, unexpected token "(", expecting variable in C:\Users\Aims\Local Sites\module3\app\public\wp-content\plugins\wp-forms\includes\class-wp-forms.php on line 77
+[06-Aug-2024 04:11:37 UTC] PHP Parse error:  syntax error, unexpected token "(", expecting variable in C:\Users\Aims\Local Sites\module3\app\public\wp-content\plugins\wp-forms\includes\class-wp-forms.php on line 77
+[06-Aug-2024 04:13:44 UTC] PHP Parse error:  syntax error, unexpected token "(", expecting variable in C:\Users\Aims\Local Sites\module3\app\public\wp-content\plugins\wp-forms\includes\class-wp-forms.php on line 77
+[06-Aug-2024 04:22:22 UTC] PHP Parse error:  syntax error, unexpected token "(", expecting variable in C:\Users\Aims\Local Sites\module3\app\public\wp-content\plugins\wp-forms\includes\class-wp-forms.php on line 77
+[06-Aug-2024 04:22:48 UTC] PHP Parse error:  syntax error, unexpected token "(", expecting variable in C:\Users\Aims\Local Sites\module3\app\public\wp-content\plugins\wp-forms\includes\class-wp-forms.php on line 77
+[06-Aug-2024 04:26:31 UTC] PHP Fatal error:  Uncaught TypeError: call_user_func_array(): Argument #1 ($callback) must be a valid callback, class Wp_Forms_Public does not have a method "registration" in C:\Users\Aims\Local Sites\module3\app\public\wp-includes\class-wp-hook.php:324
+Stack trace:
+#0 C:\Users\Aims\Local Sites\module3\app\public\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#1 C:\Users\Aims\Local Sites\module3\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#2 C:\Users\Aims\Local Sites\module3\app\public\wp-settings.php(700): do_action('init')
+#3 C:\Users\Aims\Local Sites\module3\app\public\wp-config.php(103): require_once('C:\\Users\\Aims\\L...')
+#4 C:\Users\Aims\Local Sites\module3\app\public\wp-load.php(50): require_once('C:\\Users\\Aims\\L...')
+#5 C:\Users\Aims\Local Sites\module3\app\public\wp-admin\admin.php(34): require_once('C:\\Users\\Aims\\L...')
+#6 C:\Users\Aims\Local Sites\module3\app\public\wp-admin\index.php(10): require_once('C:\\Users\\Aims\\L...')
+#7 {main}
+  thrown in C:\Users\Aims\Local Sites\module3\app\public\wp-includes\class-wp-hook.php on line 324
+[06-Aug-2024 04:26:32 UTC] PHP Fatal error:  Uncaught TypeError: call_user_func_array(): Argument #1 ($callback) must be a valid callback, class Wp_Forms_Public does not have a method "registration" in C:\Users\Aims\Local Sites\module3\app\public\wp-includes\class-wp-hook.php:324
+Stack trace:
+#0 C:\Users\Aims\Local Sites\module3\app\public\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#1 C:\Users\Aims\Local Sites\module3\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#2 C:\Users\Aims\Local Sites\module3\app\public\wp-settings.php(700): do_action('init')
+#3 C:\Users\Aims\Local Sites\module3\app\public\wp-config.php(103): require_once('C:\\Users\\Aims\\L...')
+#4 C:\Users\Aims\Local Sites\module3\app\public\wp-load.php(50): require_once('C:\\Users\\Aims\\L...')
+#5 C:\Users\Aims\Local Sites\module3\app\public\wp-blog-header.php(13): require_once('C:\\Users\\Aims\\L...')
+#6 C:\Users\Aims\Local Sites\module3\app\public\index.php(17): require('C:\\Users\\Aims\\L...')
+#7 {main}
+  thrown in C:\Users\Aims\Local Sites\module3\app\public\wp-includes\class-wp-hook.php on line 324
+[06-Aug-2024 04:45:54 UTC] PHP Fatal error:  Uncaught TypeError: call_user_func_array(): Argument #1 ($callback) must be a valid callback, class Wp_Forms_Public does not have a method "registration" in C:\Users\Aims\Local Sites\module3\app\public\wp-includes\class-wp-hook.php:324
+Stack trace:
+#0 C:\Users\Aims\Local Sites\module3\app\public\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#1 C:\Users\Aims\Local Sites\module3\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#2 C:\Users\Aims\Local Sites\module3\app\public\wp-settings.php(700): do_action('init')
+#3 C:\Users\Aims\Local Sites\module3\app\public\wp-config.php(103): require_once('C:\\Users\\Aims\\L...')
+#4 C:\Users\Aims\Local Sites\module3\app\public\wp-load.php(50): require_once('C:\\Users\\Aims\\L...')
+#5 C:\Users\Aims\Local Sites\module3\app\public\wp-admin\admin.php(34): require_once('C:\\Users\\Aims\\L...')
+#6 C:\Users\Aims\Local Sites\module3\app\public\wp-admin\index.php(10): require_once('C:\\Users\\Aims\\L...')
+#7 {main}
+  thrown in C:\Users\Aims\Local Sites\module3\app\public\wp-includes\class-wp-hook.php on line 324
+[06-Aug-2024 04:46:00 UTC] PHP Fatal error:  Uncaught TypeError: call_user_func_array(): Argument #1 ($callback) must be a valid callback, class Wp_Forms_Public does not have a method "registration" in C:\Users\Aims\Local Sites\module3\app\public\wp-includes\class-wp-hook.php:324
+Stack trace:
+#0 C:\Users\Aims\Local Sites\module3\app\public\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#1 C:\Users\Aims\Local Sites\module3\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#2 C:\Users\Aims\Local Sites\module3\app\public\wp-settings.php(700): do_action('init')
+#3 C:\Users\Aims\Local Sites\module3\app\public\wp-config.php(103): require_once('C:\\Users\\Aims\\L...')
+#4 C:\Users\Aims\Local Sites\module3\app\public\wp-load.php(50): require_once('C:\\Users\\Aims\\L...')
+#5 C:\Users\Aims\Local Sites\module3\app\public\wp-blog-header.php(13): require_once('C:\\Users\\Aims\\L...')
+#6 C:\Users\Aims\Local Sites\module3\app\public\index.php(17): require('C:\\Users\\Aims\\L...')
+#7 {main}
+  thrown in C:\Users\Aims\Local Sites\module3\app\public\wp-includes\class-wp-hook.php on line 324
+[06-Aug-2024 04:58:28 UTC] PHP Fatal error:  Uncaught TypeError: call_user_func_array(): Argument #1 ($callback) must be a valid callback, class Wp_Forms_Public does not have a method "registration" in C:\Users\Aims\Local Sites\module3\app\public\wp-includes\class-wp-hook.php:324
+Stack trace:
+#0 C:\Users\Aims\Local Sites\module3\app\public\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#1 C:\Users\Aims\Local Sites\module3\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#2 C:\Users\Aims\Local Sites\module3\app\public\wp-settings.php(700): do_action('init')
+#3 C:\Users\Aims\Local Sites\module3\app\public\wp-config.php(103): require_once('C:\\Users\\Aims\\L...')
+#4 C:\Users\Aims\Local Sites\module3\app\public\wp-load.php(50): require_once('C:\\Users\\Aims\\L...')
+#5 C:\Users\Aims\Local Sites\module3\app\public\wp-admin\admin.php(34): require_once('C:\\Users\\Aims\\L...')
+#6 C:\Users\Aims\Local Sites\module3\app\public\wp-admin\index.php(10): require_once('C:\\Users\\Aims\\L...')
+#7 {main}
+  thrown in C:\Users\Aims\Local Sites\module3\app\public\wp-includes\class-wp-hook.php on line 324
+[06-Aug-2024 04:58:29 UTC] PHP Fatal error:  Uncaught TypeError: call_user_func_array(): Argument #1 ($callback) must be a valid callback, class Wp_Forms_Public does not have a method "registration" in C:\Users\Aims\Local Sites\module3\app\public\wp-includes\class-wp-hook.php:324
+Stack trace:
+#0 C:\Users\Aims\Local Sites\module3\app\public\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#1 C:\Users\Aims\Local Sites\module3\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#2 C:\Users\Aims\Local Sites\module3\app\public\wp-settings.php(700): do_action('init')
+#3 C:\Users\Aims\Local Sites\module3\app\public\wp-config.php(103): require_once('C:\\Users\\Aims\\L...')
+#4 C:\Users\Aims\Local Sites\module3\app\public\wp-load.php(50): require_once('C:\\Users\\Aims\\L...')
+#5 C:\Users\Aims\Local Sites\module3\app\public\wp-blog-header.php(13): require_once('C:\\Users\\Aims\\L...')
+#6 C:\Users\Aims\Local Sites\module3\app\public\index.php(17): require('C:\\Users\\Aims\\L...')
+#7 {main}
+  thrown in C:\Users\Aims\Local Sites\module3\app\public\wp-includes\class-wp-hook.php on line 324
+[06-Aug-2024 05:14:56 UTC] PHP Fatal error:  Uncaught TypeError: call_user_func_array(): Argument #1 ($callback) must be a valid callback, class Wp_Forms_Public does not have a method "handle_login" in C:\Users\Aims\Local Sites\module3\app\public\wp-includes\class-wp-hook.php:324
+Stack trace:
+#0 C:\Users\Aims\Local Sites\module3\app\public\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#1 C:\Users\Aims\Local Sites\module3\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#2 C:\Users\Aims\Local Sites\module3\app\public\wp-settings.php(700): do_action('init')
+#3 C:\Users\Aims\Local Sites\module3\app\public\wp-config.php(103): require_once('C:\\Users\\Aims\\L...')
+#4 C:\Users\Aims\Local Sites\module3\app\public\wp-load.php(50): require_once('C:\\Users\\Aims\\L...')
+#5 C:\Users\Aims\Local Sites\module3\app\public\wp-admin\admin.php(34): require_once('C:\\Users\\Aims\\L...')
+#6 C:\Users\Aims\Local Sites\module3\app\public\wp-admin\index.php(10): require_once('C:\\Users\\Aims\\L...')
+#7 {main}
+  thrown in C:\Users\Aims\Local Sites\module3\app\public\wp-includes\class-wp-hook.php on line 324
+[06-Aug-2024 05:14:58 UTC] PHP Fatal error:  Uncaught TypeError: call_user_func_array(): Argument #1 ($callback) must be a valid callback, class Wp_Forms_Public does not have a method "handle_login" in C:\Users\Aims\Local Sites\module3\app\public\wp-includes\class-wp-hook.php:324
+Stack trace:
+#0 C:\Users\Aims\Local Sites\module3\app\public\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#1 C:\Users\Aims\Local Sites\module3\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#2 C:\Users\Aims\Local Sites\module3\app\public\wp-settings.php(700): do_action('init')
+#3 C:\Users\Aims\Local Sites\module3\app\public\wp-config.php(103): require_once('C:\\Users\\Aims\\L...')
+#4 C:\Users\Aims\Local Sites\module3\app\public\wp-load.php(50): require_once('C:\\Users\\Aims\\L...')
+#5 C:\Users\Aims\Local Sites\module3\app\public\wp-blog-header.php(13): require_once('C:\\Users\\Aims\\L...')
+#6 C:\Users\Aims\Local Sites\module3\app\public\index.php(17): require('C:\\Users\\Aims\\L...')
+#7 {main}
+  thrown in C:\Users\Aims\Local Sites\module3\app\public\wp-includes\class-wp-hook.php on line 324
+[06-Aug-2024 05:18:05 UTC] PHP Warning:  Undefined property: Wp_Forms_Admin::$version in C:\Users\Aims\Local Sites\module3\app\public\wp-content\plugins\wp-forms\admin\class-wp-forms-admin.php on line 12
+[06-Aug-2024 05:18:05 UTC] PHP Warning:  Undefined property: Wp_Forms_Admin::$version in C:\Users\Aims\Local Sites\module3\app\public\wp-content\plugins\wp-forms\admin\class-wp-forms-admin.php on line 16
+[06-Aug-2024 06:03:41 UTC] PHP Fatal error:  Uncaught Error: Non-static method Wp_Forms_Activator::wp_forms_create_table() cannot be called statically in C:\Users\Aims\Local Sites\module3\app\public\wp-content\plugins\wp-forms\includes\class-wp-forms-activator.php:10
+Stack trace:
+#0 C:\Users\Aims\Local Sites\module3\app\public\wp-content\plugins\wp-forms\wp-forms.php(34): Wp_Forms_Activator::activate()
+#1 C:\Users\Aims\Local Sites\module3\app\public\wp-includes\class-wp-hook.php(324): activate_wp_forms(false)
+#2 C:\Users\Aims\Local Sites\module3\app\public\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#3 C:\Users\Aims\Local Sites\module3\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#4 C:\Users\Aims\Local Sites\module3\app\public\wp-admin\includes\plugin.php(703): do_action('activate_wp-for...', false)
+#5 C:\Users\Aims\Local Sites\module3\app\public\wp-admin\plugins.php(60): activate_plugin('wp-forms/wp-for...', 'http://module3....', false)
+#6 {main}
+  thrown in C:\Users\Aims\Local Sites\module3\app\public\wp-content\plugins\wp-forms\includes\class-wp-forms-activator.php on line 10
+[06-Aug-2024 06:30:42 UTC] WordPress database error Duplicate entry 'amna@gmail.com' for key 'email' for query INSERT INTO `wp_register_users` (`name`, `email`, `password`) VALUES ('Amna', 'amna@gmail.com', '$P$BGZDKaDMBmCrC9GwSU4rJSRbIUWGfd0') made by require('wp-blog-header.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('init'), WP_Hook->do_action, WP_Hook->apply_filters, Wp_Forms_Public->handle_registration
+[06-Aug-2024 06:32:38 UTC] WordPress database error Duplicate entry 'amna@gmail.com' for key 'email' for query INSERT INTO `wp_register_users` (`name`, `email`, `password`) VALUES ('Amna', 'amna@gmail.com', '$P$BDwsiqmY35DHgCkmSPDK.8Q6E5o/Gj1') made by require('wp-blog-header.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('init'), WP_Hook->do_action, WP_Hook->apply_filters, Wp_Forms_Public->handle_registration
+[06-Aug-2024 10:22:17 UTC] PHP Warning:  Undefined property: stdClass::$ID in C:\Users\Aims\Local Sites\module3\app\public\wp-content\plugins\wp-forms\public\class-wp-forms-public.php on line 199
+[06-Aug-2024 10:22:17 UTC] PHP Warning:  Undefined property: stdClass::$ID in C:\Users\Aims\Local Sites\module3\app\public\wp-content\plugins\wp-forms\public\class-wp-forms-public.php on line 204
+[06-Aug-2024 10:22:17 UTC] PHP Warning:  Undefined property: stdClass::$ID in C:\Users\Aims\Local Sites\module3\app\public\wp-content\plugins\wp-forms\public\class-wp-forms-public.php on line 205
+[06-Aug-2024 10:23:17 UTC] PHP Warning:  Undefined property: stdClass::$ID in C:\Users\Aims\Local Sites\module3\app\public\wp-content\plugins\wp-forms\public\class-wp-forms-public.php on line 199
+[06-Aug-2024 10:23:17 UTC] PHP Warning:  Undefined property: stdClass::$ID in C:\Users\Aims\Local Sites\module3\app\public\wp-content\plugins\wp-forms\public\class-wp-forms-public.php on line 204
+[06-Aug-2024 10:23:17 UTC] PHP Warning:  Undefined property: stdClass::$ID in C:\Users\Aims\Local Sites\module3\app\public\wp-content\plugins\wp-forms\public\class-wp-forms-public.php on line 205
+[06-Aug-2024 10:23:31 UTC] PHP Warning:  Undefined property: stdClass::$ID in C:\Users\Aims\Local Sites\module3\app\public\wp-content\plugins\wp-forms\public\class-wp-forms-public.php on line 199
+[06-Aug-2024 10:25:07 UTC] PHP Warning:  Undefined property: stdClass::$ID in C:\Users\Aims\Local Sites\module3\app\public\wp-content\plugins\wp-forms\public\class-wp-forms-public.php on line 199

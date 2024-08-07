@@ -15,13 +15,15 @@
  * Domain Path:       /languages
  */
 
- class Wp_Forms
- {
+
+class Wp_Forms
+{
 
     protected $plugin_name;
     protected $version;
 
-    public function __construct(){
+    public function __construct()
+    {
 
         $this->plugin_name = 'wp-forms';
         $this->version = '1.0.0';
@@ -35,7 +37,8 @@
     }
 
 
-    private function load_dependencies(){
+    private function load_dependencies()
+    {
         //include all files
         require_once plugin_dir_path(dirname(__FILE__)) . 'includes/class-wp-forms-activator.php';
         require_once plugin_dir_path(dirname(__FILE__)) . 'includes/class-wp-forms-deactivator.php';
@@ -48,33 +51,46 @@
      * Register all hooks related to admin area functionality 
      * of plugin
      */
-    private function define_admin_hooks(){
+    private function define_admin_hooks()
+    {
         $plugin_admin = new Wp_Forms_Admin();
-        add_action('admin_enqueue_scripts', array( $plugin_admin, 'enqueue_styles' ));
-        add_action('admin_enqueue_scripts', array( $plugin_admin, 'enqueue_scripts' ));
+        add_action('admin_enqueue_scripts', array($plugin_admin, 'enqueue_styles'));
+        add_action('admin_enqueue_scripts', array($plugin_admin, 'enqueue_scripts'));
     }
 
     /**
      * Register all hooks related to public side functionality 
      * of plugin
      */
-    private function define_public_hooks(){
+    private function define_public_hooks()
+    {
         $plugin_public = new Wp_Forms_Public();
+
         add_action('wp_enqueue_scripts', array($plugin_public, 'enqueue_styles'));
         add_action('wp_enqueue_scripts', array($plugin_public, 'enqueue_scripts'));
 
-
-        //add shortcodes of login and registration forms
+        // Add shortcodes of login and registration forms
         add_shortcode('wp_forms_registration', array($plugin_public, 'registration_form'));
         add_shortcode('wp_forms_login', array($plugin_public, 'login_form'));
 
+        // Register AJAX actions
+        add_action('wp_ajax_register', array($plugin_public, 'handle_registration'));
+        add_action('wp_ajax_nopriv_register', array($plugin_public, 'handle_registration'));
 
-        //handle registration and login functionality
-        add_action('init', array($plugin_public, 'registration'));
-        add_action('init', array($plugin_public, 'login'));
+        add_action('wp_ajax_login', array($plugin_public, 'handle_login'));
+        add_action('wp_ajax_nopriv_login', array($plugin_public, 'handle_login'));
     }
 
-    public run(){
+
+    public function run()
+    {
         //run the plugin
     }
- }
+}
+
+
+// Register activation hook
+register_activation_hook(__FILE__, array('Wp_Forms_Activator', 'activate'));
+
+// Register deactivation hook
+register_deactivation_hook(__FILE__, array('Wp_Forms_Deactivator', 'deactivate_plugin'));

@@ -1,0 +1,58 @@
+public function handle_registration() {
+        if (isset($_POST['action']) && $_POST['action'] == 'register') {
+            global $wpdb;
+            $table_name = $wpdb->prefix . 'register_users';
+    
+            $name = sanitize_text_field($_POST['name']);
+            $email = sanitize_email($_POST['email']);
+            $password = $_POST['password'];
+            $confpassword = $_POST['confpassword'];
+    
+            $errors = array();
+    
+            if (empty($name)) {
+                $errors['name-error'] = "Name is required";
+            }
+    
+            if (!is_email($email)) {
+                $errors['email-error'] = "Please enter a valid email";
+            } else {
+                $existing_user = $wpdb->get_var($wpdb->prepare("SELECT email FROM $table_name WHERE email = %s", $email));
+                if ($existing_user) {
+                    $errors['email-error'] = "Email already exists";
+                }
+            }
+    
+            if (!preg_match('/^(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+{}:;<>,.?~\\/-])[A-Za-z\d!@#$%^&*()_+{}:;<>,.?~\\/-]{8,}$/', $password)) {
+                $errors['password-error'] = "Password must be at least 8 characters long and contain at least one capital letter, one special character, and one number.";
+            }
+    
+            if ($password !== $confpassword) {
+                $errors['confpassword-error'] = "Passwords do not match";
+            }
+    
+            if (empty($errors)) {
+                $wpdb->insert(
+                    $table_name,
+                    array(
+                        'name' => $name,
+                        'email' => $email,
+                        'password' => wp_hash_password($password)
+                    )
+                );
+    
+                // Check for DB errors
+                if ($wpdb->last_error) {
+                    error_log("DB Error: " . $wpdb->last_error);
+                    echo json_encode(array('success' => false, 'errors' => array('db' => 'Database error occurred.')));
+                    wp_die();
+                }
+    
+                echo json_encode(array('success' => true));
+                wp_die();
+            }
+    
+            echo json_encode(array('success' => false, 'errors' => $errors));
+            wp_die();
+        }
+    }

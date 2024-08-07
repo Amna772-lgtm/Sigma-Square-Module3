@@ -4,6 +4,8 @@
  */
 
 class Wp_Forms_Admin{
+
+    private $version = '1.0.0';
     public function __construct(){
         //constructor code
     }

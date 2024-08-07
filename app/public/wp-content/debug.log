@@ -1,0 +1,47 @@
+[06-Aug-2024 12:57:16 UTC] PHP Fatal error:  Uncaught TypeError: call_user_func_array(): Argument #1 ($callback) must be a valid callback, class Wp_Forms does not have a method "handle_login" in C:\Users\Aims\Local Sites\module3\app\public\wp-includes\class-wp-hook.php:324
+Stack trace:
+#0 C:\Users\Aims\Local Sites\module3\app\public\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#1 C:\Users\Aims\Local Sites\module3\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#2 C:\Users\Aims\Local Sites\module3\app\public\wp-admin\admin-ajax.php(192): do_action('wp_ajax_login')
+#3 {main}
+  thrown in C:\Users\Aims\Local Sites\module3\app\public\wp-includes\class-wp-hook.php on line 324
+[07-Aug-2024 04:26:02 UTC] PHP Warning:  mysqli_real_connect(): (HY000/2002): No connection could be made because the target machine actively refused it in C:\Users\Aims\Local Sites\module3\app\public\wp-includes\class-wpdb.php on line 1982
+[07-Aug-2024 04:26:02 UTC] PHP Warning:  mysqli_real_connect(): (HY000/2002): No connection could be made because the target machine actively refused it in C:\Users\Aims\Local Sites\module3\app\public\wp-includes\class-wpdb.php on line 1982
+[07-Aug-2024 04:26:02 UTC] PHP Warning:  mysqli_real_connect(): (HY000/2002): No connection could be made because the target machine actively refused it in C:\Users\Aims\Local Sites\module3\app\public\wp-includes\class-wpdb.php on line 1982
+[07-Aug-2024 04:27:11 UTC] PHP Warning:  mysqli_real_connect(): (HY000/2002): No connection could be made because the target machine actively refused it in C:\Users\Aims\Local Sites\module3\app\public\wp-includes\class-wpdb.php on line 1982
+[07-Aug-2024 04:27:11 UTC] PHP Warning:  mysqli_real_connect(): (HY000/2002): No connection could be made because the target machine actively refused it in C:\Users\Aims\Local Sites\module3\app\public\wp-includes\class-wpdb.php on line 1982
+[07-Aug-2024 04:53:29 UTC] PHP Fatal error:  Uncaught TypeError: call_user_func_array(): Argument #1 ($callback) must be a valid callback, class Wp_Forms does not have a method "handle_registration" in C:\Users\Aims\Local Sites\module3\app\public\wp-includes\class-wp-hook.php:324
+Stack trace:
+#0 C:\Users\Aims\Local Sites\module3\app\public\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#1 C:\Users\Aims\Local Sites\module3\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#2 C:\Users\Aims\Local Sites\module3\app\public\wp-admin\admin-ajax.php(192): do_action('wp_ajax_registe...')
+#3 {main}
+  thrown in C:\Users\Aims\Local Sites\module3\app\public\wp-includes\class-wp-hook.php on line 324
+[07-Aug-2024 04:59:56 UTC] PHP Fatal error:  Uncaught TypeError: call_user_func_array(): Argument #1 ($callback) must be a valid callback, class Wp_Forms does not have a method "handle_registration" in C:\Users\Aims\Local Sites\module3\app\public\wp-includes\class-wp-hook.php:324
+Stack trace:
+#0 C:\Users\Aims\Local Sites\module3\app\public\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#1 C:\Users\Aims\Local Sites\module3\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#2 C:\Users\Aims\Local Sites\module3\app\public\wp-admin\admin-ajax.php(192): do_action('wp_ajax_registe...')
+#3 {main}
+  thrown in C:\Users\Aims\Local Sites\module3\app\public\wp-includes\class-wp-hook.php on line 324
+[07-Aug-2024 05:10:53 UTC] PHP Fatal error:  Uncaught TypeError: call_user_func_array(): Argument #1 ($callback) must be a valid callback, class Wp_Forms does not have a method "handle_registration" in C:\Users\Aims\Local Sites\module3\app\public\wp-includes\class-wp-hook.php:324
+Stack trace:
+#0 C:\Users\Aims\Local Sites\module3\app\public\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#1 C:\Users\Aims\Local Sites\module3\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#2 C:\Users\Aims\Local Sites\module3\app\public\wp-admin\admin-ajax.php(192): do_action('wp_ajax_registe...')
+#3 {main}
+  thrown in C:\Users\Aims\Local Sites\module3\app\public\wp-includes\class-wp-hook.php on line 324
+[07-Aug-2024 05:38:57 UTC] PHP Fatal error:  Uncaught TypeError: call_user_func_array(): Argument #1 ($callback) must be a valid callback, class Wp_Forms does not have a method "handle_registration" in C:\Users\Aims\Local Sites\module3\app\public\wp-includes\class-wp-hook.php:324
+Stack trace:
+#0 C:\Users\Aims\Local Sites\module3\app\public\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#1 C:\Users\Aims\Local Sites\module3\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#2 C:\Users\Aims\Local Sites\module3\app\public\wp-admin\admin-ajax.php(192): do_action('wp_ajax_registe...')
+#3 {main}
+  thrown in C:\Users\Aims\Local Sites\module3\app\public\wp-includes\class-wp-hook.php on line 324
+[07-Aug-2024 05:39:12 UTC] PHP Fatal error:  Uncaught TypeError: call_user_func_array(): Argument #1 ($callback) must be a valid callback, class Wp_Forms does not have a method "handle_registration" in C:\Users\Aims\Local Sites\module3\app\public\wp-includes\class-wp-hook.php:324
+Stack trace:
+#0 C:\Users\Aims\Local Sites\module3\app\public\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#1 C:\Users\Aims\Local Sites\module3\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#2 C:\Users\Aims\Local Sites\module3\app\public\wp-admin\admin-ajax.php(192): do_action('wp_ajax_registe...')
+#3 {main}
+  thrown in C:\Users\Aims\Local Sites\module3\app\public\wp-includes\class-wp-hook.php on line 324
