@@ -8,9 +8,29 @@ class Wp_Forms_Public
     private $version = '1.0.0';
     public function __construct()
     {
-        //constructor code
+        //add_action('init', array($this, 'start_session'));
     }
 
+
+    // Start session
+    public function start_session()
+    {
+        if (!session_id()) {
+            session_start();
+        }
+    }
+
+    // Check if user is logged in
+    public function is_user_logged_in()
+    {
+        return isset($_SESSION['user_id']);
+    }
+
+    // Get the ID of the logged-in user
+    public function get_logged_in_user_id()
+    {
+        return $this->is_user_logged_in() ? $_SESSION['user_id'] : null;
+    }
 
     //including css file
     public function enqueue_styles()
@@ -235,6 +255,11 @@ class Wp_Forms_Public
             if (!empty($errors)) {
                 echo json_encode(array('success' => false, 'errors' => $errors));
             } else {
+
+                // Set session variables
+                $_SESSION['user_id'] = $user->id;
+                $_SESSION['user_email'] = $user->email;
+
                 // Respond with success
                 echo json_encode(array('success' => true));
             }
@@ -242,9 +267,141 @@ class Wp_Forms_Public
         }
     }
 
+
+    /**
+     * Function to create a todo list form
+     */
+    public function todo_list_form()
+    {
+        ob_start();
+
+        // Fetch the logged-in user's name
+        $user_id = $this->get_logged_in_user_id();
+        if ($user_id) {
+            global $wpdb;
+            $table_name = $wpdb->prefix . 'register_users';
+            $user = $wpdb->get_row($wpdb->prepare("SELECT name FROM $table_name WHERE id = %d", $user_id));
+            $user_name = $user ? $user->name : 'User';
+        } else {
+            $user_name = 'User';
+        }
+        ?>
+        
+        <div class="todo-container">
+            <h1 class="todo-title"><?php echo esc_html($user_name); ?>'s Task List</h1>
+            <form id="todo-form" class="todo-form">
+                <input type="hidden" name="action" value="add_todo">
+                <div class="todo-input-group">
+                    <input type="text" class="todo-input" id="task" name="task" placeholder="Enter your task" required>
+                    <button type="submit" class="todo-button">Add Task</button>
+                </div>
+                <span id="task-error" class="todo-error-message"></span>
+            </form>
+            <div id="todo-list" class="todo-list">
+                <!-- To-Do items will be appended here -->
+            </div>
+        </div>
+        <?php
+        return ob_get_clean();
+    }
+
+
+    /**
+     * Handle adding a task
+     */
+    public function handle_add_todo()
+    {
+        if (isset($_POST['action']) && $_POST['action'] == 'add_todo') {
+            global $wpdb;
+            $table_name = $wpdb->prefix . 'todo_list';
+
+            if (!$this->is_user_logged_in()) {
+                echo json_encode(array('success' => false, 'errors' => array('login' => 'You must be logged in to add a task')));
+                wp_die();
+            }
+
+            $task = sanitize_text_field($_POST['task']);
+            $user_id = $this->get_logged_in_user_id();
+
+            if (empty($task)) {
+                echo json_encode(array('success' => false, 'errors' => array('task' => 'Task is required')));
+                wp_die();
+            }
+
+            $wpdb->insert(
+                $table_name,
+                array(
+                    'user_id' => $user_id,
+                    'task' => $task,
+                    'status' => 'pending'
+                )
+            );
+
+            if ($wpdb->last_error) {
+                error_log("DB Error: " . $wpdb->last_error);
+                echo json_encode(array('success' => false, 'errors' => array('db' => 'Database error occurred.')));
+                wp_die();
+            }
+
+            echo json_encode(array('success' => true));
+            wp_die();
+        }
+    }
+
+
+
+    /**
+     * Fetch tasks for the logged-in user
+     */
+    public function fetch_tasks()
+    {
+        if (isset($_POST['action']) && $_POST['action'] == 'fetch_tasks') {
+            global $wpdb;
+            $table_name = $wpdb->prefix . 'todo_list';
+            $user_id = $_SESSION['user_id'];
+
+            $tasks = $wpdb->get_results($wpdb->prepare("SELECT * FROM $table_name WHERE user_id = %d", $user_id));
+
+            if ($wpdb->last_error) {
+                error_log("DB Error: " . $wpdb->last_error);
+                echo json_encode(array('success' => false, 'errors' => array('db' => 'Database error occurred.')));
+                wp_die();
+            }
+
+            echo json_encode(array('success' => true, 'tasks' => $tasks));
+            wp_die();
+        }
+    }
+
+
+    /**
+     * Handle updating a task
+     */
+    public function handle_update_todo()
+    {
+        if (isset($_POST['action']) && $_POST['action'] == 'update_todo') {
+            global $wpdb;
+            $table_name = $wpdb->prefix . 'todo_list';
+
+            $task_id = intval($_POST['task_id']);
+            $status = sanitize_text_field($_POST['status']);
+
+            $wpdb->update(
+                $table_name,
+                array('status' => $status),
+                array('id' => $task_id)
+            );
+
+            if ($wpdb->last_error) {
+                error_log("DB Error: " . $wpdb->last_error);
+                echo json_encode(array('success' => false, 'errors' => array('db' => 'Database error occurred.')));
+                wp_die();
+            }
+
+            echo json_encode(array('success' => true));
+            wp_die();
+        }
+    }
+
 }
-
-
-
-
 

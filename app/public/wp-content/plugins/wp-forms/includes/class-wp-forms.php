@@ -66,19 +66,34 @@ class Wp_Forms
     {
         $plugin_public = new Wp_Forms_Public();
 
+        //for session
+        add_action('init', array($plugin_public, 'start_session'), 1);
+
         add_action('wp_enqueue_scripts', array($plugin_public, 'enqueue_styles'));
         add_action('wp_enqueue_scripts', array($plugin_public, 'enqueue_scripts'));
 
-        // Add shortcodes of login and registration forms
+        // Add shortcodes of login, registration and todo-list forms
         add_shortcode('wp_forms_registration', array($plugin_public, 'registration_form'));
         add_shortcode('wp_forms_login', array($plugin_public, 'login_form'));
+        add_shortcode('wp_forms_todo_list', array($plugin_public, 'todo_list_form'));
 
-        // Register AJAX actions
+        // Register AJAX actions 
         add_action('wp_ajax_register', array($plugin_public, 'handle_registration'));
         add_action('wp_ajax_nopriv_register', array($plugin_public, 'handle_registration'));
 
+        //Login AJAX actions
         add_action('wp_ajax_login', array($plugin_public, 'handle_login'));
         add_action('wp_ajax_nopriv_login', array($plugin_public, 'handle_login'));
+
+        //Add Todo list AJAX actions
+        add_action('wp_ajax_add_todo', array($plugin_public, 'handle_add_todo'));
+
+        //Fetch Todo list AJAX actions
+        add_action('wp_ajax_fetch_tasks', array($plugin_public, 'fetch_tasks'));
+
+        //Update Todo list AJAX actions
+        add_action('wp_ajax_update_todo', array($plugin_public, 'handle_update_todo'));
+
     }
 
 

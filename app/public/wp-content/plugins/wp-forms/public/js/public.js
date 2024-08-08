@@ -48,8 +48,7 @@ jQuery(document).ready(function ($) {
     });
   });
 
-
-  //for login 
+  //for login
   $("#login").on("submit", function (e) {
     e.preventDefault();
 
@@ -93,4 +92,131 @@ jQuery(document).ready(function ($) {
       },
     });
   });
+
+  // Handle task addition
+  $("#todo-form").on("submit", function (e) {
+    e.preventDefault();
+
+    $.ajax({
+      type: "POST",
+      url: wpforms_vars.ajax_url,
+      data: $(this).serialize(),
+      success: function (response) {
+        try {
+          response = JSON.parse(response);
+        } catch (e) {
+          alert("An unexpected error occurred. Please try again.");
+          return;
+        }
+
+        if (response.success) {
+          fetchTasks(); // Refresh the task list
+          $("#task").val(""); // Clear the task input field
+        } else {
+          if (response.errors.task) {
+            $("#task-error").text(response.errors.task);
+          }
+        }
+      },
+      error: function (xhr, status, error) {
+        alert("An error occurred while adding the task. Please try again.");
+      },
+    });
+  });
+
+  // Fetch tasks for the logged-in user
+  function fetchTasks() {
+    $.ajax({
+      type: "POST",
+      url: wpforms_vars.ajax_url,
+      data: { action: "fetch_tasks" },
+      success: function (response) {
+        try {
+          response = JSON.parse(response);
+        } catch (e) {
+          alert("An unexpected error occurred. Please try again.");
+          return;
+        }
+
+        if (response.success) {
+          const tasks = response.tasks;
+          const taskList = $("#todo-list");
+
+          taskList.empty();
+
+          if (tasks.length > 0) {
+            tasks.forEach(function (task) {
+              const taskHtml = `
+                      <div class="todo-item" data-task-id="${task.id}">
+                        <input type="checkbox" class="todo-checkbox" ${
+                          task.status === "completed" ? "checked" : ""
+                        }>
+                        <span class="todo-text ${
+                          task.status === "completed" ? "todo-completed" : ""
+                        }">${task.task}</span>
+                        <div class="todo-actions">
+                          <select class="todo-status">
+                            <option value="pending" ${
+                              task.status === "pending" ? "selected" : ""
+                            }>Pending</option>
+                            <option value="in progress" ${
+                              task.status === "in progress" ? "selected" : ""
+                            }>In Progress</option>
+                            <option value="completed" ${
+                              task.status === "completed" ? "selected" : ""
+                            }>Completed</option>
+                          </select>
+                          <button class="todo-update-button">Update</button>
+                        </div>
+                      </div>
+                    `;
+              taskList.append(taskHtml);
+            });
+          } else {
+            taskList.append("<p>No tasks added</p>");
+          }
+        }
+      },
+      error: function (xhr, status, error) {
+        alert("An error occurred while fetching the tasks. Please try again.");
+      },
+    });
+  }
+
+  // Handle task update
+  $("#todo-list").on("click", ".todo-update-button", function () {
+    const taskItem = $(this).closest(".todo-item");
+    const taskId = taskItem.data("task-id");
+    const status = taskItem.find(".todo-status").val();
+
+    $.ajax({
+      type: "POST",
+      url: wpforms_vars.ajax_url,
+      data: {
+        action: "update_todo",
+        task_id: taskId,
+        status: status,
+      },
+      success: function (response) {
+        try {
+          response = JSON.parse(response);
+        } catch (e) {
+          alert("An unexpected error occurred. Please try again.");
+          return;
+        }
+
+        if (response.success) {
+          fetchTasks(); // Refresh the task list
+        } else {
+          alert("An error occurred while updating the task. Please try again.");
+        }
+      },
+      error: function (xhr, status, error) {
+        alert("An error occurred while updating the task. Please try again.");
+      },
+    });
+  });
+
+  // Fetch tasks on page load
+  fetchTasks();
 });

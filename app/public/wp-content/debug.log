@@ -45,3 +45,847 @@ Stack trace:
 #2 C:\Users\Aims\Local Sites\module3\app\public\wp-admin\admin-ajax.php(192): do_action('wp_ajax_registe...')
 #3 {main}
   thrown in C:\Users\Aims\Local Sites\module3\app\public\wp-includes\class-wp-hook.php on line 324
+[07-Aug-2024 10:41:22 UTC] PHP Warning:  wp_update_plugins(): An unexpected error occurred. Something may be wrong with WordPress.org or this server&#8217;s configuration. If you continue to have problems, please try the <a href="https://wordpress.org/support/forums/">support forums</a>. (WordPress could not establish a secure connection to WordPress.org. Please contact your server administrator.) in C:\Users\Aims\Local Sites\module3\app\public\wp-includes\functions.php on line 6085
+[07-Aug-2024 10:43:37 UTC] Automatic updates starting...
+[07-Aug-2024 10:43:40 UTC] Automatic updates complete.
+[07-Aug-2024 10:45:10 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method Wp_Forms_Activator::wp_forms_create_table() in C:\Users\Aims\Local Sites\module3\app\public\wp-content\plugins\wp-forms\includes\class-wp-forms-activator.php:10
+Stack trace:
+#0 C:\Users\Aims\Local Sites\module3\app\public\wp-content\plugins\wp-forms\wp-forms.php(34): Wp_Forms_Activator::activate()
+#1 C:\Users\Aims\Local Sites\module3\app\public\wp-includes\class-wp-hook.php(324): activate_wp_forms(false)
+#2 C:\Users\Aims\Local Sites\module3\app\public\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#3 C:\Users\Aims\Local Sites\module3\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#4 C:\Users\Aims\Local Sites\module3\app\public\wp-admin\includes\plugin.php(703): do_action('activate_wp-for...', false)
+#5 C:\Users\Aims\Local Sites\module3\app\public\wp-admin\plugins.php(60): activate_plugin('wp-forms/wp-for...', 'http://module3....', false)
+#6 {main}
+  thrown in C:\Users\Aims\Local Sites\module3\app\public\wp-content\plugins\wp-forms\includes\class-wp-forms-activator.php on line 10
+[07-Aug-2024 11:43:25 UTC] PHP Fatal error:  Uncaught TypeError: call_user_func_array(): Argument #1 ($callback) must be a valid callback, class Wp_Forms does not have a method "handle_update_todo_status" in C:\Users\Aims\Local Sites\module3\app\public\wp-includes\class-wp-hook.php:324
+Stack trace:
+#0 C:\Users\Aims\Local Sites\module3\app\public\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#1 C:\Users\Aims\Local Sites\module3\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#2 C:\Users\Aims\Local Sites\module3\app\public\wp-admin\admin-ajax.php(192): do_action('wp_ajax_update_...')
+#3 {main}
+  thrown in C:\Users\Aims\Local Sites\module3\app\public\wp-includes\class-wp-hook.php on line 324
+[07-Aug-2024 11:47:41 UTC] PHP Fatal error:  Uncaught TypeError: call_user_func_array(): Argument #1 ($callback) must be a valid callback, class Wp_Forms does not have a method "handle_update_todo_status" in C:\Users\Aims\Local Sites\module3\app\public\wp-includes\class-wp-hook.php:324
+Stack trace:
+#0 C:\Users\Aims\Local Sites\module3\app\public\wp-includes\class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#1 C:\Users\Aims\Local Sites\module3\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#2 C:\Users\Aims\Local Sites\module3\app\public\wp-admin\admin-ajax.php(192): do_action('wp_ajax_update_...')
+#3 {main}
+  thrown in C:\Users\Aims\Local Sites\module3\app\public\wp-includes\class-wp-hook.php on line 324
+[07-Aug-2024 12:34:06 UTC] User ID not found for email: amnarani338@gmail.com
+[07-Aug-2024 12:34:18 UTC] User ID not found for email: amnarani338@gmail.com
+[07-Aug-2024 12:34:33 UTC] User ID not found for email: amnarani338@gmail.com
+[07-Aug-2024 12:42:38 UTC] User ID not found for email: amnarani338@gmail.com
+[07-Aug-2024 12:43:01 UTC] User ID not found for email: amnarani338@gmail.com
+[07-Aug-2024 12:45:00 UTC] User ID not found for email: amnarani338@gmail.com
+[07-Aug-2024 13:04:46 UTC] Current user ID: 1
+[07-Aug-2024 13:04:46 UTC] Fetched todos: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 1
+            [user_id] => 1
+            [task] => Module3 started
+            [status] => pending
+            [created_at] => 2024-08-07 16:40:47
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 2
+            [user_id] => 1
+            [task] => Add Login Page
+            [status] => pending
+            [created_at] => 2024-08-07 16:43:18
+        )
+
+    [2] => stdClass Object
+        (
+            [id] => 3
+            [user_id] => 1
+            [task] => Perform Login Functionality
+            [status] => pending
+            [created_at] => 2024-08-07 16:44:06
+        )
+
+    [3] => stdClass Object
+        (
+            [id] => 4
+            [user_id] => 1
+            [task] => Add Registration Page
+            [status] => pending
+            [created_at] => 2024-08-07 16:45:09
+        )
+
+    [4] => stdClass Object
+        (
+            [id] => 5
+            [user_id] => 1
+            [task] => Register New User
+            [status] => pending
+            [created_at] => 2024-08-07 16:45:47
+        )
+
+    [5] => stdClass Object
+        (
+            [id] => 6
+            [user_id] => 1
+            [task] => Create Todo List for specific User
+            [status] => pending
+            [created_at] => 2024-08-07 16:46:39
+        )
+
+    [6] => stdClass Object
+        (
+            [id] => 7
+            [user_id] => 1
+            [task] => Save the complete data into database tables
+            [status] => pending
+            [created_at] => 2024-08-07 16:47:04
+        )
+
+    [7] => stdClass Object
+        (
+            [id] => 8
+            [user_id] => 1
+            [task] => abc
+            [status] => pending
+            [created_at] => 2024-08-07 17:44:57
+        )
+
+)
+
+[07-Aug-2024 13:05:01 UTC] Current user ID: 1
+[07-Aug-2024 13:05:02 UTC] Fetched todos: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 1
+            [user_id] => 1
+            [task] => Module3 started
+            [status] => pending
+            [created_at] => 2024-08-07 16:40:47
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 2
+            [user_id] => 1
+            [task] => Add Login Page
+            [status] => pending
+            [created_at] => 2024-08-07 16:43:18
+        )
+
+    [2] => stdClass Object
+        (
+            [id] => 3
+            [user_id] => 1
+            [task] => Perform Login Functionality
+            [status] => pending
+            [created_at] => 2024-08-07 16:44:06
+        )
+
+    [3] => stdClass Object
+        (
+            [id] => 4
+            [user_id] => 1
+            [task] => Add Registration Page
+            [status] => pending
+            [created_at] => 2024-08-07 16:45:09
+        )
+
+    [4] => stdClass Object
+        (
+            [id] => 5
+            [user_id] => 1
+            [task] => Register New User
+            [status] => pending
+            [created_at] => 2024-08-07 16:45:47
+        )
+
+    [5] => stdClass Object
+        (
+            [id] => 6
+            [user_id] => 1
+            [task] => Create Todo List for specific User
+            [status] => pending
+            [created_at] => 2024-08-07 16:46:39
+        )
+
+    [6] => stdClass Object
+        (
+            [id] => 7
+            [user_id] => 1
+            [task] => Save the complete data into database tables
+            [status] => pending
+            [created_at] => 2024-08-07 16:47:04
+        )
+
+    [7] => stdClass Object
+        (
+            [id] => 8
+            [user_id] => 1
+            [task] => abc
+            [status] => pending
+            [created_at] => 2024-08-07 17:44:57
+        )
+
+)
+
+[07-Aug-2024 13:05:44 UTC] Current user ID: 1
+[07-Aug-2024 13:05:44 UTC] Fetched todos: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 1
+            [user_id] => 1
+            [task] => Module3 started
+            [status] => pending
+            [created_at] => 2024-08-07 16:40:47
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 2
+            [user_id] => 1
+            [task] => Add Login Page
+            [status] => pending
+            [created_at] => 2024-08-07 16:43:18
+        )
+
+    [2] => stdClass Object
+        (
+            [id] => 3
+            [user_id] => 1
+            [task] => Perform Login Functionality
+            [status] => pending
+            [created_at] => 2024-08-07 16:44:06
+        )
+
+    [3] => stdClass Object
+        (
+            [id] => 4
+            [user_id] => 1
+            [task] => Add Registration Page
+            [status] => pending
+            [created_at] => 2024-08-07 16:45:09
+        )
+
+    [4] => stdClass Object
+        (
+            [id] => 5
+            [user_id] => 1
+            [task] => Register New User
+            [status] => pending
+            [created_at] => 2024-08-07 16:45:47
+        )
+
+    [5] => stdClass Object
+        (
+            [id] => 6
+            [user_id] => 1
+            [task] => Create Todo List for specific User
+            [status] => pending
+            [created_at] => 2024-08-07 16:46:39
+        )
+
+    [6] => stdClass Object
+        (
+            [id] => 7
+            [user_id] => 1
+            [task] => Save the complete data into database tables
+            [status] => pending
+            [created_at] => 2024-08-07 16:47:04
+        )
+
+    [7] => stdClass Object
+        (
+            [id] => 8
+            [user_id] => 1
+            [task] => abc
+            [status] => pending
+            [created_at] => 2024-08-07 17:44:57
+        )
+
+)
+
+[07-Aug-2024 13:06:00 UTC] Current user ID: 1
+[07-Aug-2024 13:06:00 UTC] Fetched todos: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 1
+            [user_id] => 1
+            [task] => Module3 started
+            [status] => pending
+            [created_at] => 2024-08-07 16:40:47
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 2
+            [user_id] => 1
+            [task] => Add Login Page
+            [status] => pending
+            [created_at] => 2024-08-07 16:43:18
+        )
+
+    [2] => stdClass Object
+        (
+            [id] => 3
+            [user_id] => 1
+            [task] => Perform Login Functionality
+            [status] => pending
+            [created_at] => 2024-08-07 16:44:06
+        )
+
+    [3] => stdClass Object
+        (
+            [id] => 4
+            [user_id] => 1
+            [task] => Add Registration Page
+            [status] => pending
+            [created_at] => 2024-08-07 16:45:09
+        )
+
+    [4] => stdClass Object
+        (
+            [id] => 5
+            [user_id] => 1
+            [task] => Register New User
+            [status] => pending
+            [created_at] => 2024-08-07 16:45:47
+        )
+
+    [5] => stdClass Object
+        (
+            [id] => 6
+            [user_id] => 1
+            [task] => Create Todo List for specific User
+            [status] => pending
+            [created_at] => 2024-08-07 16:46:39
+        )
+
+    [6] => stdClass Object
+        (
+            [id] => 7
+            [user_id] => 1
+            [task] => Save the complete data into database tables
+            [status] => pending
+            [created_at] => 2024-08-07 16:47:04
+        )
+
+    [7] => stdClass Object
+        (
+            [id] => 8
+            [user_id] => 1
+            [task] => abc
+            [status] => pending
+            [created_at] => 2024-08-07 17:44:57
+        )
+
+)
+
+[07-Aug-2024 17:29:50 UTC] Current User ID: 1
+[07-Aug-2024 17:29:50 UTC] Todos: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 1
+            [user_id] => 1
+            [task] => Module3 started
+            [status] => pending
+            [created_at] => 2024-08-07 16:40:47
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 2
+            [user_id] => 1
+            [task] => Add Login Page
+            [status] => pending
+            [created_at] => 2024-08-07 16:43:18
+        )
+
+    [2] => stdClass Object
+        (
+            [id] => 3
+            [user_id] => 1
+            [task] => Perform Login Functionality
+            [status] => pending
+            [created_at] => 2024-08-07 16:44:06
+        )
+
+    [3] => stdClass Object
+        (
+            [id] => 4
+            [user_id] => 1
+            [task] => Add Registration Page
+            [status] => pending
+            [created_at] => 2024-08-07 16:45:09
+        )
+
+    [4] => stdClass Object
+        (
+            [id] => 5
+            [user_id] => 1
+            [task] => Register New User
+            [status] => pending
+            [created_at] => 2024-08-07 16:45:47
+        )
+
+    [5] => stdClass Object
+        (
+            [id] => 6
+            [user_id] => 1
+            [task] => Create Todo List for specific User
+            [status] => pending
+            [created_at] => 2024-08-07 16:46:39
+        )
+
+    [6] => stdClass Object
+        (
+            [id] => 7
+            [user_id] => 1
+            [task] => Save the complete data into database tables
+            [status] => pending
+            [created_at] => 2024-08-07 16:47:04
+        )
+
+    [7] => stdClass Object
+        (
+            [id] => 8
+            [user_id] => 1
+            [task] => abc
+            [status] => pending
+            [created_at] => 2024-08-07 17:44:57
+        )
+
+)
+
+[07-Aug-2024 17:29:59 UTC] Current User ID: 1
+[07-Aug-2024 17:30:00 UTC] Todos: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 1
+            [user_id] => 1
+            [task] => Module3 started
+            [status] => pending
+            [created_at] => 2024-08-07 16:40:47
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 2
+            [user_id] => 1
+            [task] => Add Login Page
+            [status] => pending
+            [created_at] => 2024-08-07 16:43:18
+        )
+
+    [2] => stdClass Object
+        (
+            [id] => 3
+            [user_id] => 1
+            [task] => Perform Login Functionality
+            [status] => pending
+            [created_at] => 2024-08-07 16:44:06
+        )
+
+    [3] => stdClass Object
+        (
+            [id] => 4
+            [user_id] => 1
+            [task] => Add Registration Page
+            [status] => pending
+            [created_at] => 2024-08-07 16:45:09
+        )
+
+    [4] => stdClass Object
+        (
+            [id] => 5
+            [user_id] => 1
+            [task] => Register New User
+            [status] => pending
+            [created_at] => 2024-08-07 16:45:47
+        )
+
+    [5] => stdClass Object
+        (
+            [id] => 6
+            [user_id] => 1
+            [task] => Create Todo List for specific User
+            [status] => pending
+            [created_at] => 2024-08-07 16:46:39
+        )
+
+    [6] => stdClass Object
+        (
+            [id] => 7
+            [user_id] => 1
+            [task] => Save the complete data into database tables
+            [status] => pending
+            [created_at] => 2024-08-07 16:47:04
+        )
+
+    [7] => stdClass Object
+        (
+            [id] => 8
+            [user_id] => 1
+            [task] => abc
+            [status] => pending
+            [created_at] => 2024-08-07 17:44:57
+        )
+
+)
+
+[07-Aug-2024 17:30:50 UTC] Current User ID: 1
+[07-Aug-2024 17:30:50 UTC] Todos: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 1
+            [user_id] => 1
+            [task] => Module3 started
+            [status] => pending
+            [created_at] => 2024-08-07 16:40:47
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 2
+            [user_id] => 1
+            [task] => Add Login Page
+            [status] => pending
+            [created_at] => 2024-08-07 16:43:18
+        )
+
+    [2] => stdClass Object
+        (
+            [id] => 3
+            [user_id] => 1
+            [task] => Perform Login Functionality
+            [status] => pending
+            [created_at] => 2024-08-07 16:44:06
+        )
+
+    [3] => stdClass Object
+        (
+            [id] => 4
+            [user_id] => 1
+            [task] => Add Registration Page
+            [status] => pending
+            [created_at] => 2024-08-07 16:45:09
+        )
+
+    [4] => stdClass Object
+        (
+            [id] => 5
+            [user_id] => 1
+            [task] => Register New User
+            [status] => pending
+            [created_at] => 2024-08-07 16:45:47
+        )
+
+    [5] => stdClass Object
+        (
+            [id] => 6
+            [user_id] => 1
+            [task] => Create Todo List for specific User
+            [status] => pending
+            [created_at] => 2024-08-07 16:46:39
+        )
+
+    [6] => stdClass Object
+        (
+            [id] => 7
+            [user_id] => 1
+            [task] => Save the complete data into database tables
+            [status] => pending
+            [created_at] => 2024-08-07 16:47:04
+        )
+
+    [7] => stdClass Object
+        (
+            [id] => 8
+            [user_id] => 1
+            [task] => abc
+            [status] => pending
+            [created_at] => 2024-08-07 17:44:57
+        )
+
+)
+
+[07-Aug-2024 17:41:54 UTC] Current User ID: 1
+[07-Aug-2024 17:41:54 UTC] Todos: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 1
+            [user_id] => 1
+            [task] => Module3 started
+            [status] => pending
+            [created_at] => 2024-08-07 16:40:47
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 2
+            [user_id] => 1
+            [task] => Add Login Page
+            [status] => pending
+            [created_at] => 2024-08-07 16:43:18
+        )
+
+    [2] => stdClass Object
+        (
+            [id] => 3
+            [user_id] => 1
+            [task] => Perform Login Functionality
+            [status] => pending
+            [created_at] => 2024-08-07 16:44:06
+        )
+
+    [3] => stdClass Object
+        (
+            [id] => 4
+            [user_id] => 1
+            [task] => Add Registration Page
+            [status] => pending
+            [created_at] => 2024-08-07 16:45:09
+        )
+
+    [4] => stdClass Object
+        (
+            [id] => 5
+            [user_id] => 1
+            [task] => Register New User
+            [status] => pending
+            [created_at] => 2024-08-07 16:45:47
+        )
+
+    [5] => stdClass Object
+        (
+            [id] => 6
+            [user_id] => 1
+            [task] => Create Todo List for specific User
+            [status] => pending
+            [created_at] => 2024-08-07 16:46:39
+        )
+
+    [6] => stdClass Object
+        (
+            [id] => 7
+            [user_id] => 1
+            [task] => Save the complete data into database tables
+            [status] => pending
+            [created_at] => 2024-08-07 16:47:04
+        )
+
+    [7] => stdClass Object
+        (
+            [id] => 8
+            [user_id] => 1
+            [task] => abc
+            [status] => pending
+            [created_at] => 2024-08-07 17:44:57
+        )
+
+)
+
+[07-Aug-2024 17:41:58 UTC] Current User ID: 1
+[07-Aug-2024 17:41:58 UTC] Todos: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 1
+            [user_id] => 1
+            [task] => Module3 started
+            [status] => pending
+            [created_at] => 2024-08-07 16:40:47
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 2
+            [user_id] => 1
+            [task] => Add Login Page
+            [status] => pending
+            [created_at] => 2024-08-07 16:43:18
+        )
+
+    [2] => stdClass Object
+        (
+            [id] => 3
+            [user_id] => 1
+            [task] => Perform Login Functionality
+            [status] => pending
+            [created_at] => 2024-08-07 16:44:06
+        )
+
+    [3] => stdClass Object
+        (
+            [id] => 4
+            [user_id] => 1
+            [task] => Add Registration Page
+            [status] => pending
+            [created_at] => 2024-08-07 16:45:09
+        )
+
+    [4] => stdClass Object
+        (
+            [id] => 5
+            [user_id] => 1
+            [task] => Register New User
+            [status] => pending
+            [created_at] => 2024-08-07 16:45:47
+        )
+
+    [5] => stdClass Object
+        (
+            [id] => 6
+            [user_id] => 1
+            [task] => Create Todo List for specific User
+            [status] => pending
+            [created_at] => 2024-08-07 16:46:39
+        )
+
+    [6] => stdClass Object
+        (
+            [id] => 7
+            [user_id] => 1
+            [task] => Save the complete data into database tables
+            [status] => pending
+            [created_at] => 2024-08-07 16:47:04
+        )
+
+    [7] => stdClass Object
+        (
+            [id] => 8
+            [user_id] => 1
+            [task] => abc
+            [status] => pending
+            [created_at] => 2024-08-07 17:44:57
+        )
+
+)
+
+[07-Aug-2024 17:42:19 UTC] Current User ID: 1
+[07-Aug-2024 17:42:19 UTC] Todos: Array
+(
+    [0] => stdClass Object
+        (
+            [id] => 1
+            [user_id] => 1
+            [task] => Module3 started
+            [status] => pending
+            [created_at] => 2024-08-07 16:40:47
+        )
+
+    [1] => stdClass Object
+        (
+            [id] => 2
+            [user_id] => 1
+            [task] => Add Login Page
+            [status] => pending
+            [created_at] => 2024-08-07 16:43:18
+        )
+
+    [2] => stdClass Object
+        (
+            [id] => 3
+            [user_id] => 1
+            [task] => Perform Login Functionality
+            [status] => pending
+            [created_at] => 2024-08-07 16:44:06
+        )
+
+    [3] => stdClass Object
+        (
+            [id] => 4
+            [user_id] => 1
+            [task] => Add Registration Page
+            [status] => pending
+            [created_at] => 2024-08-07 16:45:09
+        )
+
+    [4] => stdClass Object
+        (
+            [id] => 5
+            [user_id] => 1
+            [task] => Register New User
+            [status] => pending
+            [created_at] => 2024-08-07 16:45:47
+        )
+
+    [5] => stdClass Object
+        (
+            [id] => 6
+            [user_id] => 1
+            [task] => Create Todo List for specific User
+            [status] => pending
+            [created_at] => 2024-08-07 16:46:39
+        )
+
+    [6] => stdClass Object
+        (
+            [id] => 7
+            [user_id] => 1
+            [task] => Save the complete data into database tables
+            [status] => pending
+            [created_at] => 2024-08-07 16:47:04
+        )
+
+    [7] => stdClass Object
+        (
+            [id] => 8
+            [user_id] => 1
+            [task] => abc
+            [status] => pending
+            [created_at] => 2024-08-07 17:44:57
+        )
+
+)
+
+[07-Aug-2024 18:10:33 UTC] WordPress database error Cannot drop table 'wp_register_users' referenced by a foreign key constraint 'wp_todo_list_ibfk_1' on table 'wp_todo_list'. for query DROP TABLE IF EXISTS wp_register_users; made by deactivate_plugins, do_action('deactivate_wp-forms/wp-forms.php'), WP_Hook->do_action, WP_Hook->apply_filters, deactivate_wp_forms, Wp_Forms_Deactivator::deactivate, Wp_Forms_Deactivator::drop_custom_tables
+[07-Aug-2024 18:15:59 UTC] PHP Fatal error:  Uncaught Error: Class "Wp_Forms_Admin" not found in C:\Users\Aims\Local Sites\module3\app\public\wp-content\plugins\wp-forms\includes\class-wp-forms.php:56
+Stack trace:
+#0 C:\Users\Aims\Local Sites\module3\app\public\wp-content\plugins\wp-forms\includes\class-wp-forms.php(35): Wp_Forms->define_admin_hooks()
+#1 C:\Users\Aims\Local Sites\module3\app\public\wp-content\plugins\wp-forms\wp-forms.php(63): Wp_Forms->__construct()
+#2 C:\Users\Aims\Local Sites\module3\app\public\wp-content\plugins\wp-forms\wp-forms.php(66): run_wp_forms()
+#3 C:\Users\Aims\Local Sites\module3\app\public\wp-settings.php(522): include_once('C:\\Users\\Aims\\L...')
+#4 C:\Users\Aims\Local Sites\module3\app\public\wp-config.php(104): require_once('C:\\Users\\Aims\\L...')
+#5 C:\Users\Aims\Local Sites\module3\app\public\wp-load.php(50): require_once('C:\\Users\\Aims\\L...')
+#6 C:\Users\Aims\Local Sites\module3\app\public\wp-admin\admin-ajax.php(22): require_once('C:\\Users\\Aims\\L...')
+#7 {main}
+  thrown in C:\Users\Aims\Local Sites\module3\app\public\wp-content\plugins\wp-forms\includes\class-wp-forms.php on line 56
+[07-Aug-2024 18:20:57 UTC] PHP Notice:  Function do_shortcode_tag was called <strong>incorrectly</strong>. Attempting to parse a shortcode without a valid callback: wp_forms_todo_list Please see <a href="https://developer.wordpress.org/advanced-administration/debug/debug-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 4.3.0.) in C:\Users\Aims\Local Sites\module3\app\public\wp-includes\functions.php on line 6085
+[07-Aug-2024 18:21:09 UTC] PHP Notice:  Function do_shortcode_tag was called <strong>incorrectly</strong>. Attempting to parse a shortcode without a valid callback: wp_forms_todo_list Please see <a href="https://developer.wordpress.org/advanced-administration/debug/debug-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 4.3.0.) in C:\Users\Aims\Local Sites\module3\app\public\wp-includes\functions.php on line 6085
+[08-Aug-2024 04:17:25 UTC] PHP Warning:  wp_version_check(): An unexpected error occurred. Something may be wrong with WordPress.org or this server&#8217;s configuration. If you continue to have problems, please try the <a href="https://wordpress.org/support/forums/">support forums</a>. (WordPress could not establish a secure connection to WordPress.org. Please contact your server administrator.) in C:\Users\Aims\Local Sites\module3\app\public\wp-includes\functions.php on line 6085
+[08-Aug-2024 04:59:14 UTC] PHP Warning:  Undefined array key "user_id" in C:\Users\Aims\Local Sites\module3\app\public\wp-content\plugins\wp-forms\public\class-wp-forms-public.php on line 324
+[08-Aug-2024 04:59:17 UTC] WordPress database error Table 'local.wp_todos' doesn't exist for query SELECT * FROM wp_todos WHERE user_id = 0 made by do_action('wp_ajax_fetch_tasks'), WP_Hook->do_action, WP_Hook->apply_filters, Wp_Forms_Public->fetch_tasks
+[08-Aug-2024 04:59:17 UTC] DB Error: Table 'local.wp_todos' doesn't exist
+[08-Aug-2024 04:59:35 UTC] PHP Warning:  Undefined array key "user_id" in C:\Users\Aims\Local Sites\module3\app\public\wp-content\plugins\wp-forms\public\class-wp-forms-public.php on line 324
+[08-Aug-2024 04:59:35 UTC] WordPress database error Table 'local.wp_todos' doesn't exist for query SELECT * FROM wp_todos WHERE user_id = 0 made by do_action('wp_ajax_fetch_tasks'), WP_Hook->do_action, WP_Hook->apply_filters, Wp_Forms_Public->fetch_tasks
+[08-Aug-2024 04:59:35 UTC] DB Error: Table 'local.wp_todos' doesn't exist
+[08-Aug-2024 04:59:42 UTC] PHP Warning:  Undefined array key "user_id" in C:\Users\Aims\Local Sites\module3\app\public\wp-content\plugins\wp-forms\public\class-wp-forms-public.php on line 324
+[08-Aug-2024 04:59:43 UTC] WordPress database error Table 'local.wp_todos' doesn't exist for query SELECT * FROM wp_todos WHERE user_id = 0 made by do_action('wp_ajax_fetch_tasks'), WP_Hook->do_action, WP_Hook->apply_filters, Wp_Forms_Public->fetch_tasks
+[08-Aug-2024 04:59:43 UTC] DB Error: Table 'local.wp_todos' doesn't exist
+[08-Aug-2024 05:02:55 UTC] PHP Warning:  Undefined array key "user_id" in C:\Users\Aims\Local Sites\module3\app\public\wp-content\plugins\wp-forms\public\class-wp-forms-public.php on line 324
+[08-Aug-2024 05:03:00 UTC] WordPress database error Table 'local.wp_todos_list' doesn't exist for query SELECT * FROM wp_todos_list WHERE user_id = 0 made by do_action('wp_ajax_fetch_tasks'), WP_Hook->do_action, WP_Hook->apply_filters, Wp_Forms_Public->fetch_tasks
+[08-Aug-2024 05:03:00 UTC] DB Error: Table 'local.wp_todos_list' doesn't exist
+[08-Aug-2024 05:05:07 UTC] PHP Warning:  Undefined array key "user_id" in C:\Users\Aims\Local Sites\module3\app\public\wp-content\plugins\wp-forms\public\class-wp-forms-public.php on line 324
+[08-Aug-2024 05:05:10 UTC] PHP Warning:  Undefined array key "user_id" in C:\Users\Aims\Local Sites\module3\app\public\wp-content\plugins\wp-forms\public\class-wp-forms-public.php on line 324
+[08-Aug-2024 05:05:14 UTC] PHP Warning:  Undefined array key "user_id" in C:\Users\Aims\Local Sites\module3\app\public\wp-content\plugins\wp-forms\public\class-wp-forms-public.php on line 324
+[08-Aug-2024 05:05:35 UTC] PHP Warning:  Undefined array key "user_id" in C:\Users\Aims\Local Sites\module3\app\public\wp-content\plugins\wp-forms\public\class-wp-forms-public.php on line 324
+[08-Aug-2024 05:05:48 UTC] PHP Warning:  Undefined array key "user_id" in C:\Users\Aims\Local Sites\module3\app\public\wp-content\plugins\wp-forms\public\class-wp-forms-public.php on line 324
+[08-Aug-2024 05:05:58 UTC] PHP Warning:  Undefined array key "user_id" in C:\Users\Aims\Local Sites\module3\app\public\wp-content\plugins\wp-forms\public\class-wp-forms-public.php on line 289
+[08-Aug-2024 05:05:58 UTC] WordPress database error Column 'user_id' cannot be null for query INSERT INTO `wp_todo_list` (`user_id`, `task`, `status`) VALUES (NULL, 'Module3 started', 'pending') made by do_action('wp_ajax_add_todo'), WP_Hook->do_action, WP_Hook->apply_filters, Wp_Forms_Public->handle_add_todo
+[08-Aug-2024 05:05:58 UTC] DB Error: Column 'user_id' cannot be null
+[08-Aug-2024 05:13:29 UTC] PHP Warning:  Undefined array key "user_id" in C:\Users\Aims\Local Sites\module3\app\public\wp-content\plugins\wp-forms\public\class-wp-forms-public.php on line 343
+[08-Aug-2024 05:13:37 UTC] PHP Warning:  Undefined array key "user_id" in C:\Users\Aims\Local Sites\module3\app\public\wp-content\plugins\wp-forms\public\class-wp-forms-public.php on line 307
+[08-Aug-2024 05:13:38 UTC] WordPress database error Column 'user_id' cannot be null for query INSERT INTO `wp_todo_list` (`user_id`, `task`, `status`) VALUES (NULL, 'Module3 started', 'pending') made by do_action('wp_ajax_add_todo'), WP_Hook->do_action, WP_Hook->apply_filters, Wp_Forms_Public->handle_add_todo
+[08-Aug-2024 05:13:38 UTC] DB Error: Column 'user_id' cannot be null
+[08-Aug-2024 05:20:04 UTC] PHP Warning:  Undefined array key "user_id" in C:\Users\Aims\Local Sites\module3\app\public\wp-content\plugins\wp-forms\public\class-wp-forms-public.php on line 349
+[08-Aug-2024 05:21:54 UTC] PHP Warning:  Undefined array key "user_id" in C:\Users\Aims\Local Sites\module3\app\public\wp-content\plugins\wp-forms\public\class-wp-forms-public.php on line 349
